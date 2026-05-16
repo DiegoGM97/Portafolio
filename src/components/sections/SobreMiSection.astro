@@ -1,0 +1,137 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<section id="sobre-mi" class="section scroll-mt-28 p-8 md:p-12">
+	<div class="mb-8 flex items-center gap-3">
+		<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/20 text-blue-400">
+			<Icon name="simple-icons:html5" class="h-5 w-5" />
+		</div>
+		<div>
+			<p class="text-xs font-semibold uppercase tracking-[0.2em] text-blue-400">Informacion</p>
+			<h2 class="text-2xl font-bold text-slate-100 md:text-3xl">Sobre mi</h2>
+		</div>
+	</div>
+
+	<div class="grid gap-10 md:grid-cols-[1fr_1.25fr] md:gap-14">
+		<div class="space-y-6 leading-relaxed text-slate-400">
+			<p>
+				Soy un desarrollador frontend enfocado en la creacion de interfaces web robustas, accessibles y con excelente experiencia de usuario. Tengo experiencia practica aplicando tecnologias modernas como <span class="text-blue-400 font-semibold">React</span>, <span class="text-blue-400 font-semibold">Next.js</span>, <span class="text-blue-400 font-semibold">TypeScript</span> y <span class="text-blue-400 font-semibold">Tailwind CSS</span> para construir soluciones eficientes y optimizadas.
+			</p>
+			<p>
+				Me considero una persona responsable, dedicada y con una curiosidad constante por aprender. Enfrentarme a nuevas tecnologias es un motor que impulsa mi crecimiento profesional y me permite adaptarme rapidamente a los cambios del sector.
+			</p>
+			<p>
+				Actualmente, contino capacitandome y perfeccionando mis habilidades tecnicas dia a dia, aplicando buenas practicas y priorizando la calidad del codigo. Mi objetivo es integrarme en equipos de desarrollo donde pueda aportar valor real, eficiencia y contribuir al exito de proyectos internacionales.
+			</p>
+		</div>
+
+		<div class="relative flex h-64 items-center justify-center  overflow-hidden rounded-xl border border-blue-500/20 bg-blue-500/5 p-6">
+			<div class="absolute inset-0 overflow-hidden">
+				<div class="floating-icon icon-1 absolute">
+					<div class="flex h-16 w-16 items-center justify-center rounded-2xl border border-blue-500/30 bg-blue-500/10 backdrop-blur-sm">
+						<Icon name="simple-icons:react" class="h-10 w-10 text-[#61DAFB]" />
+					</div>
+				</div>
+				<div class="floating-icon icon-2 absolute">
+					<div class="flex h-14 w-14 items-center justify-center rounded-2xl border border-slate-500/30 bg-slate-500/10 backdrop-blur-sm">
+						<Icon name="simple-icons:nextdotjs" class="h-9 w-9 text-white" />
+					</div>
+				</div>
+				<div class="floating-icon icon-3 absolute">
+					<div class="flex h-12 w-12 items-center justify-center rounded-xl border border-blue-400/30 bg-blue-400/10 backdrop-blur-sm">
+						<Icon name="simple-icons:typescript" class="h-8 w-8 text-[#3178C6]" />
+					</div>
+				</div>
+				<div class="floating-icon icon-4 absolute">
+					<div class="flex h-14 w-14 items-center justify-center rounded-2xl border border-cyan-500/30 bg-cyan-500/10 backdrop-blur-sm">
+						<Icon name="simple-icons:tailwindcss" class="h-9 w-9 text-[#06B6D4]" />
+					</div>
+				</div>
+				<div class="floating-icon icon-5 absolute">
+					<div class="flex h-10 w-10 items-center justify-center rounded-xl border border-blue-500/30 bg-blue-500/10 backdrop-blur-sm">
+						<Icon name="simple-icons:react" class="h-7 w-7 text-[#61DAFB]" />
+					</div>
+				</div>
+				<div class="floating-icon icon-6 absolute">
+					<div class="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-500/30 bg-slate-500/10 backdrop-blur-sm">
+						<Icon name="simple-icons:nextdotjs" class="h-8 w-8 text-white" />
+					</div>
+				</div>
+				<div class="floating-icon icon-7 absolute">
+					<div class="flex h-14 w-14 items-center justify-center rounded-2xl border border-cyan-400/30 bg-cyan-400/10 backdrop-blur-sm">
+						<Icon name="simple-icons:tailwindcss" class="h-9 w-9 text-[#06B6D4]" />
+					</div>
+				</div>
+				<div class="floating-icon icon-8 absolute">
+					<div class="flex h-11 w-11 items-center justify-center rounded-xl border border-blue-400/30 bg-blue-400/10 backdrop-blur-sm">
+						<Icon name="simple-icons:typescript" class="h-7 w-7 text-[#3178C6]" />
+					</div>
+				</div>
+			</div>
+			<div class="absolute inset-0 flex flex-col items-center justify-center">
+				<div class="text-center">
+					<div class="text-4xl font-bold gradient-text">Frontend</div>
+					<div class="text-lg font-medium text-slate-400">Developer</div>
+					<div class="mt-4 flex flex-col items-center gap-2 text-sm text-slate-400">				
+					</div>
+				</div>
+					<div class="flex items-center gap-2">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+							<span>Medellín, Antioquia</span>
+						</div>
+			</div>
+			
+		</div>
+		
+	</div>
+	
+</section>
+
+<style>
+	.floating-icon {
+		animation: float-random 8s ease-in-out infinite;
+		opacity: 0.5;
+		transition: opacity 0.5s ease;
+	}
+
+	.floating-icon:hover {
+		opacity: 1;
+	}
+
+	.icon-1 { top: 5%; left: 10%; animation-delay: 0s; animation-duration: 7s; }
+	.icon-2 { top: 15%; right: 15%; animation-delay: 1s; animation-duration: 9s; }
+	.icon-3 { top: 45%; left: 20%; animation-delay: 2s; animation-duration: 6s; }
+	.icon-4 { top: 40%; right: 20%; animation-delay: 0.5s; animation-duration: 8s; }
+	.icon-5 { bottom: 20%; left: 15%; animation-delay: 3s; animation-duration: 7.5s; }
+	.icon-6 { bottom: 15%; right: 20%; animation-delay: 1.5s; animation-duration: 6.5s; }
+	.icon-7 { bottom: 35%; left: 8%; animation-delay: 2.5s; animation-duration: 8.5s; }
+	.icon-8 { bottom: 25%; right: 5%; animation-delay: 4s; animation-duration: 7s; }
+
+	@keyframes float-random {
+		0%, 100% {
+			transform: translateY(0) rotate(0deg) scale(1);
+			opacity: 0.2;
+		}
+		15% {
+			transform: translateY(-12px) rotate(5deg) scale(1.05);
+			opacity: 0.9;
+		}
+		30% {
+			transform: translateY(-18px) rotate(-3deg) scale(1.1);
+			opacity: 0.7;
+		}
+		50% {
+			transform: translateY(-8px) rotate(3deg) scale(0.95);
+			opacity: 0.5;
+		}
+		70% {
+			transform: translateY(-15px) rotate(-5deg) scale(1.05);
+			opacity: 0.8;
+		}
+		85% {
+			transform: translateY(-5px) rotate(2deg) scale(1);
+			opacity: 0.6;
+		}
+	}
+</style>

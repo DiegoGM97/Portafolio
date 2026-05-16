@@ -1,0 +1,82 @@
+---
+/** Imagenes en `public/images/` numeradas 3 a 7. Cambia `ext` si usas jpg o webp. */
+const ext = 'png';
+const nums = [3, 4, 5, 6, 7] as const;
+const slides = nums.map((n) => ({
+	src: `/images/${n}.${ext}`,
+	alt: `Captura del marketplace B2K · B2R (${n})`,
+}));
+---
+
+<div class="bike-project-carousel relative isolate h-full min-h-56 w-full" data-bike-carousel>
+	<!-- Pista: imagenes no capturan clics (los controles van en capa superior) -->
+	<div class="relative z-0 h-56 w-full md:absolute md:inset-0 md:h-full">
+		{
+			slides.map((slide, i) => (
+				<img
+					src={slide.src}
+					alt={slide.alt}
+					loading={i === 0 ? 'eager' : 'lazy'}
+					decoding="async"
+					draggable="false"
+					class:list={[
+						'bike-slide pointer-events-none absolute inset-0 h-full w-full select-none object-cover object-top transition-opacity duration-700 ease-out',
+						i === 0 ? 'z-10 opacity-100' : 'z-0 opacity-0',
+					]}
+					data-slide-index={i}
+				/>
+			))
+		}
+	</div>
+
+	<!-- Capa de controles por encima de las capturas -->
+	<div class="pointer-events-none absolute inset-0 z-20 flex flex-col justify-between p-2">
+		<div class="pointer-events-none flex flex-1 items-center justify-between gap-2">
+			<button
+				type="button"
+				class="bike-prev pointer-events-auto cursor-pointer rounded-full border border-white/30 bg-black/45 p-2 text-white shadow-sm backdrop-blur-sm transition hover:bg-black/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+				aria-label="Imagen anterior"
+			>
+				<svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+					<path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</button>
+			<button
+				type="button"
+				class="bike-next pointer-events-auto cursor-pointer rounded-full border border-white/30 bg-black/45 p-2 text-white shadow-sm backdrop-blur-sm transition hover:bg-black/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+				aria-label="Imagen siguiente"
+			>
+				<svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+					<path d="M9 18l6-6-6-6" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</button>
+		</div>
+
+		<div class="pointer-events-none flex justify-center gap-2 pb-1">
+			{
+				slides.map((_, i) => (
+					<button
+						type="button"
+						class:list={[
+							'bike-dot pointer-events-auto h-2 min-w-2 cursor-pointer rounded-full transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white',
+							i === 0 ? 'w-6 bg-white' : 'w-2 bg-white/50 hover:bg-white/80',
+						]}
+						data-dot-index={i}
+						aria-label={`Ver captura ${i + 1} de ${slides.length}`}
+						aria-current={i === 0 ? 'true' : undefined}
+					/>
+				))
+			}
+		</div>
+	</div>
+</div>
+
+<script>
+	import { bootBikesProjectCarousels } from '../scripts/bikes-project-carousel';
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', bootBikesProjectCarousels, { once: true });
+	} else {
+		bootBikesProjectCarousels();
+	}
+</script>

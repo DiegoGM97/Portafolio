@@ -1,0 +1,32 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title?: string;
+}
+
+const { title = 'Diego Garcia | Frontend Developer' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content="Portafolio de Diego Garcia - Desarrollador Frontend especializado en React, Next.js y TypeScript" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+		<title>{title}</title>
+	</head>
+	<body class="min-h-screen scroll-smooth antialiased">
+		<div class="fixed inset-0 z-[-1]">
+			<img src="/tech-bg.svg" alt="" class="h-full w-full object-cover opacity-100" />
+			<div class="absolute inset-0 bg-linear-gradient-to-b from-[#0a0f1c]/80 via-[#0a0f1c]/60 to-[#0a0f1c]"></div>
+		</div>
+		<slot />
+	</body>
+</html>

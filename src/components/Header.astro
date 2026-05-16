@@ -1,0 +1,52 @@
+<header class="sticky top-0 z-50 border-b border-blue-500/20 bg-[#0a0f1c]/80 backdrop-blur-xl">
+	<div class="relative mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-4 py-4">
+		<a href="#inicio" aria-label="Ir al inicio" class="group flex items-center gap-2 text-lg font-bold tracking-wide text-slate-100 transition-all duration-300 hover:text-blue-400">
+			<span class="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 text-white shadow-lg shadow-blue-500/30">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<polygon points="12 2 2 7 12 12 22 7 12 2"/>
+					<polyline points="2 17 12 22 22 17"/>
+					<polyline points="2 12 12 17 22 12"/>
+				</svg>
+			</span>
+			<span class="gradient-text">DG</span>
+		</a>
+
+		<input id="menu-toggle" type="checkbox" class="peer sr-only" aria-label="Abrir menu" />
+
+		<label
+			for="menu-toggle"
+			class="inline-flex h-10 w-10 cursor-pointer flex-col items-center justify-center gap-1.5 rounded-lg border border-blue-500/20 bg-blue-500/10 transition-all hover:bg-blue-500/20 md:hidden"
+			aria-hidden="true"
+		>
+			<span class="block h-0.5 w-5 rounded bg-blue-400 transition-all peer-checked:rotate-45 peer-checked:translate-y-2"></span>
+			<span class="block h-0.5 w-5 rounded bg-blue-400 transition-all peer-checked:opacity-0"></span>
+			<span class="block h-0.5 w-5 rounded bg-blue-400 transition-all peer-checked:-rotate-45 peer-checked:-translate-y-2"></span>
+		</label>
+
+		<nav
+			class="pointer-events-none absolute right-4 top-[calc(100%+0.5rem)] flex min-w-48 flex-col items-start gap-3 rounded-xl border border-blue-500/20 bg-[#111827]/95 p-4 opacity-0 shadow-xl shadow-blue-500/10 backdrop-blur-xl transition-all duration-300 peer-checked:pointer-events-auto peer-checked:translate-y-0 peer-checked:opacity-100 md:pointer-events-auto md:static md:min-w-0 md:translate-y-0 md:flex-row md:items-center md:gap-1 md:border-0 md:bg-transparent md:p-0 md:opacity-100 md:shadow-none"
+			aria-label="Navegacion principal"
+		>
+			<a href="#inicio" class="group flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold text-slate-300 transition-all hover:bg-blue-500/10 hover:text-blue-400">
+				<span class="h-1.5 w-1.5 rounded-full bg-blue-500 opacity-0 transition-all group-hover:opacity-100"></span>
+				Inicio
+			</a>
+            <a href="#sobre-mi" class="group flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold text-slate-300 transition-all hover:bg-blue-500/10 hover:text-blue-400">
+				<span class="h-1.5 w-1.5 rounded-full bg-blue-500 opacity-0 transition-all group-hover:opacity-100"></span>
+				Sobre mi
+			</a>
+            <a href="#tecnologias" class="group flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold text-slate-300 transition-all hover:bg-blue-500/10 hover:text-blue-400">
+				<span class="h-1.5 w-1.5 rounded-full bg-blue-500 opacity-0 transition-all group-hover:opacity-100"></span>
+				Tecnologias
+			</a>
+			<a href="#proyectos" class="group flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold text-slate-300 transition-all hover:bg-blue-500/10 hover:text-blue-400">
+				<span class="h-1.5 w-1.5 rounded-full bg-blue-500 opacity-0 transition-all group-hover:opacity-100"></span>
+				Proyectos
+			</a>
+			<a href="#contacto" class="group flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold text-slate-300 transition-all hover:bg-blue-500/10 hover:text-blue-400">
+				<span class="h-1.5 w-1.5 rounded-full bg-blue-500 opacity-0 transition-all group-hover:opacity-100"></span>
+				Contacto
+			</a>
+		</nav>
+	</div>
+</header>

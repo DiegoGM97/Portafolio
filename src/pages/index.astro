@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import InicioSection from '../components/sections/InicioSection.astro';
+import ProyectosSection from '../components/sections/ProyectosSection.astro';
+import SobreMiSection from '../components/sections/SobreMiSection.astro';
+import TecnologiasSection from '../components/sections/TecnologiasSection.astro';
+import ContactoSection from '../components/sections/ContactoSection.astro';
+---
+
+<Layout title="Diego Garcia | Frontend Developer">
+	<Header />
+	<main class="mx-auto flex w-full max-w-6xl flex-col gap-10 px-4 py-10 ">
+		<InicioSection />
+		<SobreMiSection />
+		<TecnologiasSection />
+		<ProyectosSection />	
+		<ContactoSection />
+
+
+	</main>
+</Layout>

@@ -1,0 +1,132 @@
+---
+import { Icon } from 'astro-icon/components';
+import BikesProjectCarousel from '../BikesProjectCarousel.astro';
+---
+
+<section id="proyectos" class="section scroll-mt-28 p-8 md:p-12">
+	<div class="mb-8 flex items-center gap-3">
+		<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/20 text-blue-400">
+			<Icon name="simple-icons:reactivex" class="h-5 w-5" />
+		</div>
+		<div>
+			<p class="text-xs font-semibold uppercase tracking-[0.2em] text-blue-400">Portfolio</p>
+			<h2 class="text-2xl font-bold text-slate-100 md:text-3xl">Proyectos destacados</h2>
+		</div>
+	</div>
+
+	<p class="mt-2 text-slate-400">Una seleccion de proyectos que demuestran mis habilidades en desarrollo frontend.</p>
+
+	<div class="mt-8 flex flex-col gap-6">
+		<div class="group card-hover flex flex-col overflow-hidden rounded-2xl border border-blue-500/20 bg-blue-500/5 transition-all md:flex-row">
+			<div class="relative h-56 w-full shrink-0 overflow-hidden md:h-auto md:w-1/2 md:self-stretch md:min-h-64">
+				<BikesProjectCarousel />
+				<div class="pointer-events-none absolute left-4 top-4 z-30 flex flex-wrap gap-2">
+					<span class="inline-block rounded-full border border-blue-500/30 bg-[#0a0f1c]/90 px-3 py-1 text-xs font-semibold text-blue-300 shadow-sm backdrop-blur">
+						B2K · B2R
+					</span>
+					<span class="inline-block rounded-full border border-cyan-500/30 bg-cyan-500/10 px-3 py-1 text-xs font-semibold text-cyan-300 shadow-sm backdrop-blur">
+						En equipo
+					</span>
+				</div>
+			</div>
+			<div class="flex flex-1 flex-col justify-between bg-[#0a0f1c]/50 p-6 md:p-8">
+				<div class="space-y-3">
+					<h3 class="text-xl font-bold text-slate-100 md:text-2xl">Bikes2Road</h3>
+					<p class="text-sm leading-relaxed text-slate-400 md:text-base">
+						Plataforma de compra-venta de motos en Colombia. Desarrollé la arquitectura frontend, gestionando roles de usuario, flujos de publicacion dinámicos y la integracion segura de APIs con Next.js y NextAuth.
+					</p>
+				</div>
+				<div class="mt-6 space-y-4">
+					<ul class="flex flex-wrap gap-2">
+						<li class="tech-badge">Next.js</li>
+						<li class="tech-badge">React</li>
+						<li class="tech-badge">TypeScript</li>
+						<li class="tech-badge">Tailwind CSS</li>
+						<li class="tech-badge">NextAuth</li>
+						<li class="tech-badge">Framer Motion</li>
+					</ul>
+					<a href="https://dev.bikes2road.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-blue-400 transition-colors hover:text-blue-300">
+						Ver proyecto
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M7 17L17 7M17 7H7M17 7v10"/>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="group card-hover flex flex-col overflow-hidden rounded-2xl border border-blue-500/20 bg-blue-500/5 transition-all md:flex-row-reverse">
+			<div class="relative h-56 w-full shrink-0 overflow-hidden md:h-auto md:w-1/2 md:self-stretch md:min-h-64" style="background-image: url('/images/ecommerce.png'); background-size: cover; background-position: center;">
+				<span class="absolute left-4 top-4 z-30 inline-block rounded-full border border-blue-500/30 bg-[#0a0f1c]/90 px-3 py-1 text-xs font-semibold text-blue-300 shadow-sm backdrop-blur">
+					E-Commerce
+				</span>
+			</div>
+			<div class="flex flex-1 flex-col justify-between bg-[#0a0f1c]/50 p-6 md:p-8">
+				<div class="space-y-3">
+					<h3 class="text-xl font-bold text-slate-100 md:text-2xl">Tienda online moderna</h3>
+					<p class="text-sm leading-relaxed text-slate-400 md:text-base">
+						Aplicacion enfocada en experiencia de usuario, con navegacion clara, catalogo de productos, buscador integrado y carrito de compras. Pensada para mostrar una interfaz comercial limpia, responsive y orientada a conversion.
+					</p>
+				</div>
+				<div class="mt-6 space-y-4">
+					<ul class="flex flex-wrap gap-2">
+						<li class="tech-badge">React</li>
+						<li class="tech-badge">TypeScript</li>
+						<li class="tech-badge">Tailwind CSS</li>
+						<li class="tech-badge">DaisyUI</li>
+						<li class="tech-badge">Firebase</li>
+						<li class="tech-badge">Stripe</li>
+						<li class="tech-badge">Framer Motion</li>
+						<li class="tech-badge">Vercel</li>
+					</ul>
+					<a href="https://github.com/DiegoGM97/e-commerce" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-blue-400 transition-colors hover:text-blue-300">
+						Ver codigo
+						<Icon name="simple-icons:github" class="h-4 w-4" />
+					</a>
+					<a href="https://e-commerce-one-delta-46.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-blue-400 transition-colors hover:text-blue-300">
+						Ver proyecto
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M7 17L17 7M17 7H7M17 7v10"/>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="group card-hover flex flex-col overflow-hidden rounded-2xl border border-blue-500/20 bg-blue-500/5 transition-all md:flex-row">
+			<div class="relative h-56 w-full shrink-0 overflow-hidden md:h-auto md:w-1/2 md:self-stretch md:min-h-64" style="background-image: url('/images/clima-chat.png'); background-size: cover; background-position: center;">
+				<span class="absolute left-4 top-4 z-30 inline-block rounded-full border border-blue-500/30 bg-[#0a0f1c]/90 px-3 py-1 text-xs font-semibold text-blue-300 shadow-sm backdrop-blur">
+					Clima Chat
+				</span>
+			</div>
+			<div class="flex flex-1 flex-col justify-between bg-[#0a0f1c]/50 p-6 md:p-8">
+				<div class="space-y-3">
+					<h3 class="text-xl font-bold text-slate-100 md:text-2xl">Clima en tiempo real con chat integrado</h3>
+					<p class="text-sm leading-relaxed text-slate-400 md:text-base">
+						Proyecto que combina datos meteorologicos actualizados con una interfaz conversacional. Permite consultar condiciones del clima de forma rapida e intuitiva, con diseno responsive pensado para desktop y mobile.
+					</p>
+				</div>
+				<div class="mt-6 space-y-4">
+					<ul class="flex flex-wrap gap-2">
+						<li class="tech-badge">Next.js</li>
+						<li class="tech-badge">TypeScript</li>
+						<li class="tech-badge">Tailwind CSS</li>
+						<li class="tech-badge">Supabase</li>
+						<li class="tech-badge">OpenWeather API</li>
+						<li class="tech-badge">Vercel</li>
+					</ul>
+					<a href="https://github.com/DiegoGM97/Clima-chat" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-blue-400 transition-colors hover:text-blue-300">
+						Ver codigo
+						<Icon name="simple-icons:github" class="h-4 w-4" />
+					</a>
+					<a href="https://clima-chat.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-blue-400 transition-colors hover:text-blue-300">
+						Ver proyecto
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M7 17L17 7M17 7H7M17 7v10"/>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
